@@ -1,86 +1,3 @@
-// import { FiHome, FiStar } from 'react-icons/fi';
-// import Feedback from "../../views/Feedback";
-
-// export default [
-//     {
-//         id: 'home',
-//         titel: 'Home',
-//         icon: <FiHome />,
-//         navLink: '/home',
-//         resourse: 'home'
-//     },
-//     {
-//         id: 'dashboard',
-//         titel: 'Dashboard',
-//         icon: <FiStar />,
-//         navLink: '/dashboard',
-//         resourse: 'dashboard'
-//     },
-//     {
-//         id: 'feedback',
-//         titel: 'Feedback',
-//         icon: <FiStar />,
-//         navLink: '/feedback',
-//         resourse: 'feedback'
-//     },
-//     {
-//         id: 'reports',
-//         titel: 'Reports',
-//         icon: <FiStar />,
-//         navLink: '/reports',
-//         resourse: 'reports'
-//     },
-//     {
-//         id: 'menu',
-//         titel: 'Menu',
-//         icon: <FiStar />,
-//         navLink: '/menu',
-//         resourse: 'menu'
-//     },
-//     {
-//         id: 'holiday_hours',
-//         titel: 'Holiday Hours',
-//         icon: <FiStar />,
-//         navLink: '/holiday_hours',
-//         resourse: 'holiday_hours'
-//     },
-//     {
-//         id: 'marketing',
-//         titel: 'Marketing',
-//         icon: <FiStar />,
-//         navLink: '/marketing',
-//         resourse: 'marketing'
-//     },
-//     {
-//         id: 'preparation_time',
-//         titel: 'Preparation Time',
-//         icon: <FiStar />,
-//         navLink: '/preparation_time',
-//         resourse: 'preparation_time'
-//     },
-//     {
-//         id: 'users',
-//         titel: 'Users',
-//         icon: <FiStar />,
-//         navLink: '/users',
-//         resourse: 'users'
-//     },
-//     {
-//         id: 'documents',
-//         titel: 'Documents',
-//         icon: <FiStar />,
-//         navLink: '/documents',
-//         resourse: 'documents'
-//     },
-//     {
-//         id: 'settings',
-//         titel: 'Settings',
-//         icon: <FiStar />,
-//         navLink: '/settings',
-//         resourse: 'settings'
-//     },
-// ]
-
 import { faHome, faChartBar, faComments, faUtensils, faCalendarAlt, faBullhorn, faClock, faUsers, faFileAlt, faCog } from '@fortawesome/free-solid-svg-icons'; 
 
 export default [
@@ -117,7 +34,23 @@ export default [
         title: 'Menu',
         icon: faUtensils,
         navLink: '/menu',
-        resource: 'menu'
+        resource: 'menu',
+        submenu: [
+            {
+                id: 'menu-resource',
+                title: 'Resource',
+                icon: faUtensils,
+                navLink: '/menu/resource',
+                resource: 'menu/resource'
+            },
+            {
+                id: 'menu-subscriptions',
+                title: 'Subscriptions',
+                icon: faUtensils,
+                navLink: '/menu/subscriptions',
+                resource: 'menu/subscriptions'
+            }
+        ]
     },
     {
         id: 'holiday_hours',
@@ -161,4 +94,4 @@ export default [
         navLink: '/settings',
         resource: 'settings'
     },
-]
+];
