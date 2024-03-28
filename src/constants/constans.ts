@@ -1,0 +1,1 @@
+export const MENU_ITEM_NAME = 'Menu Item Name';

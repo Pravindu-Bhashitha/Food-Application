@@ -2,7 +2,7 @@
 import React, { lazy, Suspense } from 'react';
 
 // ** Router Components
-import { BrowserRouter as AppRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as AppRouter, Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import Login from "../views/Login";
 import Dashboard from "../views/Dashboard";
@@ -15,6 +15,13 @@ import PreparationTime from '../views/PreparationTime';
 import Users from '../views/Users';
 import Documents from '../views/Documents';
 import Settings from '../views/Settings';
+import Subscriptions from '../views/Subscriptions';
+import Regular from '../views/Regular';
+import Payments from '../views/Payments';
+import Payouts from '../views/Payments/Payouts';
+import Booking from '../views/Payments/Booking';
+import Invoices from '../views/Payments/Invoices';
+import InvoiceSettings from '../views/Payments/Invoice Settings';
 
 const Error = lazy(() => import('../views/Error'));
 
@@ -31,13 +38,21 @@ const Router: React.FC = () => {
                         <Route path="/dashboard" element={<Dashboard />} />
                         <Route path="/home" element={<Home />} />
                         <Route path="/feedback" element={<Feedback />} />
-                        <Route path="/reports" element={<Reports/>} />
-                        <Route path="/holiday_hours" element={<HolidayHours/>} />
-                        <Route path="/marketing" element={<Marketing/>} />
-                        <Route path="/preparation_time" element={<PreparationTime/>} />
-                        <Route path="/users" element={<Users/>} />
-                        <Route path="/documents" element={<Documents/>} />
-                        <Route path="/settings" element={<Settings/>} />
+                        <Route path="/reports" element={<Reports />} />
+                        <Route path="/payments" element={<Payments />}>
+                            <Route index element={<Payouts />} />
+                            <Route path="booking" element={<Booking />} />
+                            <Route path="invoices" element={<Invoices />} />
+                            <Route path="invoice_settings" element={<InvoiceSettings />} />
+                        </Route>
+                        <Route path="/menu/resource" element={<Regular />} />
+                        <Route path="/menu/subscriptions" element={<Subscriptions />} />
+                        <Route path="/holiday_hours" element={<HolidayHours />} />
+                        <Route path="/marketing" element={<Marketing />} />
+                        <Route path="/preparation_time" element={<PreparationTime />} />
+                        <Route path="/users" element={<Users />} />
+                        <Route path="/documents" element={<Documents />} />
+                        <Route path="/settings" element={<Settings />} />
                     </Route>
                 </Routes>
             </Suspense>

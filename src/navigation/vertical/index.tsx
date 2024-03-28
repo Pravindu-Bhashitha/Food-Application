@@ -1,4 +1,4 @@
-import { faHome, faChartBar, faComments, faUtensils, faCalendarAlt, faBullhorn, faClock, faUsers, faFileAlt, faCog } from '@fortawesome/free-solid-svg-icons'; 
+import { faHome, faChartBar, faComments, faUtensils, faCalendarAlt, faBullhorn, faClock, faUsers, faFileAlt, faCog, faCreditCard } from '@fortawesome/free-solid-svg-icons'; 
 
 export default [
     {
@@ -8,13 +8,13 @@ export default [
         navLink: '/home',
         resource: 'home'
     },
-    {
-        id: 'dashboard',
-        title: 'Dashboard',
-        icon: faChartBar,
-        navLink: '/dashboard',
-        resource: 'dashboard'
-    },
+    // {
+    //     id: 'dashboard',
+    //     title: 'Dashboard',
+    //     icon: faChartBar,
+    //     navLink: '/dashboard',
+    //     resource: 'dashboard'
+    // },
     {
         id: 'feedback',
         title: 'Feedback',
@@ -30,10 +30,17 @@ export default [
         resource: 'reports'
     },
     {
+        id: 'payemnts',
+        title: 'Payments',
+        icon: faCreditCard,
+        navLink: '/payments',
+        resource: 'payments'
+    },
+    {
         id: 'menu',
         title: 'Menu',
         icon: faUtensils,
-        navLink: '/menu',
+        navLink: '/menu/resource',
         resource: 'menu',
         submenu: [
             {

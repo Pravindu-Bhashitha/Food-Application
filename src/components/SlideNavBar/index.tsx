@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import navigations from '../../navigation/vertical/index';
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 const SideNavBar = () => {
     const [activeSubMenu, setActiveSubMenu] = useState<number | null>(null);
@@ -23,7 +23,7 @@ const SideNavBar = () => {
                     <li key={index} style={liStyle}>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <NavLink
-                                to={navigation.navLink}
+                                to={navigation?.navLink}
                                 style={activeSubMenu === index ? aActiveStyle : aStyle}
                                 onClick={() => setActiveSubMenu(index)}
                             >
@@ -36,12 +36,13 @@ const SideNavBar = () => {
                                 <span
                                     style={{
                                         ...arrowStyle,
-                                        transform: expandedSubMenus[index] ? 'rotate(180deg)' : 'rotate(0deg)',
-                                        transition: 'transform 750ms ease-in-out'
+                                        transform: expandedSubMenus[index] ? 'rotate(90deg)' : 'rotate(0deg)',
+                                        transition: 'transform 750ms ease-in-out',
+                                        marginLeft:'2rem'
                                     }}
                                     onClick={() => toggleSubMenu(index)}
                                 >
-                                    <FontAwesomeIcon icon={faCaretDown} />
+                                    <FontAwesomeIcon icon={faCaretRight} />
                                 </span>
                             )}
                         </div>
@@ -91,6 +92,7 @@ const asideStyle = {
     background: '#fff',
     padding: '8px',
     boxSizing: 'border-box' as 'border-box',
+    
 };
 
 
@@ -98,12 +100,13 @@ const ulStyle = {
     listStyle: 'none',
     padding: 0,
     marginTop: 5,
+    
 };
 
 
 const liStyle = {
     marginBottom: '15px',
-
+    color: '#384262'
 };
 
 const subliStyle = {
@@ -113,11 +116,12 @@ const subliStyle = {
 
 const aStyle = {
     textDecoration: 'none',
-    color: '#333', // text color
+    //color: '#333', // text color
     fontSize: '16px',
     fontWeight: 'normal',
     display: 'flex',
     alignItems: 'center',
+    color: '#384262' //text color
 };
 
 
@@ -140,6 +144,7 @@ const iconStyle = {
     marginRight: '10px',
     alignItems: 'center',
     width: '1.2rem',
+    color: '#384262'
 };
 
 
