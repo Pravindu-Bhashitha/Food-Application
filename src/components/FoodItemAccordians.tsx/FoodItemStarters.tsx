@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Accordion, Card, Button } from "react-bootstrap";
-import { foodData } from "../../dummy data/FoodItemData";
+import { foodData } from "../../dummyData/FoodItemData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
 import {

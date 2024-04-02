@@ -1,0 +1,27 @@
+.resource-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .resource-content {
+    width: 600px;
+  }
+  
+  .resource-title {
+    font-family: 'Baloo 2', cursive;
+  }
+  
+  .resource-search-form {
+    width: 100%;
+  }
+  
+  .food-items-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  

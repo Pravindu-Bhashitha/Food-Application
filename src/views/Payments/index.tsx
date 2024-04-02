@@ -3,15 +3,18 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import './index.css';
+import SubNavBar from '../../components/SubNavBar';
+
 
 const Payments = () => {
     const location = useLocation();
 
     return (
         <div>
-            <Navbar bg="white" style={{ borderLeft: '1px solid rgb(221 221 221)'}}>
-                <Container>
-                    <Nav className="me-auto" style={{ gap: '2rem', marginLeft: '-8rem' }}>
+            {/* <Navbar bg="white" className='payments-navbar'>
+                <Container className='payments-container'>
+                    <Nav className="payments-nav">
                         <Nav.Link as={NavLink} to="/payments" active={location.pathname === '/payments'} style={location.pathname === '/payments' ? activeLinkStyle : undefined}>
                             Payouts
                         </Nav.Link>
@@ -27,7 +30,8 @@ const Payments = () => {
                     </Nav>
                 </Container>
             </Navbar>
-            <Outlet />
+            <Outlet /> */}
+            <SubNavBar/>
         </div>
     );
 };

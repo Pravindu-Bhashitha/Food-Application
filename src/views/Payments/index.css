@@ -1,0 +1,28 @@
+/* paymentsStyles.css */
+
+.payments-navbar {
+    border-left: 1px solid rgb(221, 221, 221);
+    padding: 0;
+}
+
+.payments-container {
+    padding: 0;
+}
+
+.payments-nav {
+    gap: 2rem;
+    margin-left: -7rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    height: 100%;
+}
+
+.payments-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.payments-link.active {
+    border-bottom: 2px solid red;
+    color: red;
+}

@@ -1,0 +1,84 @@
+/* payoutsStyles.css */
+
+.payouts-container {
+    background-color: #f2f2f2;
+    padding-top: 2rem;
+}
+
+.paymentStatusBoxStyling{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.payouts-content{
+    display: flex;
+    gap: 1rem;
+    align-Items: center ;
+    height: '100%';
+}
+
+.payouts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    height: 2.5rem;
+    padding: 1rem;  
+}
+
+.payouts-title {
+    color: #1D2939;
+}
+
+.payouts-input {
+    height: 100%;
+    width: 18rem;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 0.375rem 0.75rem;
+    color: #333;
+}
+
+.payouts-button {
+    background: #590B21;
+    color: #fff;
+    border: 1px solid transparent;
+    height: 100%;
+    border-radius: 2rem;
+    width: 11rem;
+}
+
+.payouts-button-icon{
+    margin-right: 1rem;
+}
+
+.paymentsGraphBox{
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    margin: 2rem;
+}
+ 
+.paymentGraphBoxUpperLine{
+    display: flex;
+    justify-content: space-between;
+}
+
+.viewreportbtn{
+    background-color: #fff;
+    color: #1D2939;
+    border: 1px solid #D0D5DD;
+}
+
+.viewreportbtn:hover{
+    background-color: blue; /*change this color*/
+    border: 1px solid #D0D5DD;
+}
+
+.payBreakDownBox{
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    margin: 2rem;
+}

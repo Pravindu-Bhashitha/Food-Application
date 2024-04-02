@@ -1,8 +1,9 @@
+import CustomizationOffCanvas from "../../components/OffCanvas/CustomizationOffCanvas";
+
 const Dashboard = () => {
     return (
         <>
-        ................  Dashboard page
-   </>
+<CustomizationOffCanvas/>   </>
     )
 }
 

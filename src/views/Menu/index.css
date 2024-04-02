@@ -1,0 +1,35 @@
+/* regularMenuStyles.css */
+
+.regular-menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.menu-header {
+    width: 600px;
+}
+
+.menu-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-title {
+    font-family: 'Baloo 2', cursive;
+}
+
+.menu-search {
+    width: 100%;
+}
+
+.food-items-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

@@ -1,26 +1,16 @@
-import React from 'react'
+import React from 'react';
 import { Form } from "react-bootstrap";
 import FoodItemStarters from '../../components/FoodItemAccordians.tsx/FoodItemStarters';
 import FoodItemSides from '../../components/FoodItemAccordians.tsx/FoodItemSides';
+import './index.css'; // Import the CSS file
 
 const Regular = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        minHeight: "100vh", 
-      }}
-    >
-      <div style={{ width: "600px" }}>
-        <div
-          className="content mt-3 d-flex justify-content-between align-items-center "
-          style={{ width: "100%" }}
-        >
-      <h2 style={{ fontFamily: "'Baloo 2', cursive" }}>Menu</h2>
-          <Form className="d-flex">
+    <div className="resource-container">
+      <div className="resource-content">
+        <div className="content mt-3 d-flex justify-content-between align-items-center">
+          <h2 className="resource-title">Menu</h2>
+          <Form className="resource-search-form d-flex">
             <Form.Control
               type="search"
               placeholder="Search"
@@ -29,35 +19,15 @@ const Regular = () => {
             />
           </Form>
         </div>
-
-        <div
-          className="food-items-container"
-          style={{
-            marginTop: "20px",
-            display: "flex",
-            justifyContent: "center",
-            width: "100%",
-          }}
-        >
-          <FoodItemStarters/>
-
+        <div className="food-items-container">
+          <FoodItemStarters />
         </div>
-
-        <div
-          className="food-items-container"
-          style={{
-            marginTop: "20px",
-            display: "flex",
-            justifyContent: "center",
-            width: "100%",
-          }}
-        >
+        <div className="food-items-container">
           <FoodItemSides />
         </div>
-      
       </div>
     </div>
-  )
+  );
 }
 
 export default Regular;

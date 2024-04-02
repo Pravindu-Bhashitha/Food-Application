@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import navigations from '../../navigation/vertical/index';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
+import './index.css';
 
 const SideNavBar = () => {
     const [activeSubMenu, setActiveSubMenu] = useState<number | null>(null);
@@ -17,20 +18,20 @@ const SideNavBar = () => {
     };
 
     return (
-        <aside style={asideStyle}>
-            <ul style={ulStyle}>
+        <aside className='aside'>
+            <ul className='ul'>
                 {navigations && navigations.map((navigation, index) => (
-                    <li key={index} style={liStyle}>
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <li key={index} className='li'>
+                        <div className='lidiv'>
                             <NavLink
                                 to={navigation?.navLink}
                                 style={activeSubMenu === index ? aActiveStyle : aStyle}
                                 onClick={() => setActiveSubMenu(index)}
                             >
-                                <span style={iconStyle}>
+                                <span className='icon'>
                                     <FontAwesomeIcon icon={navigation.icon} />
                                 </span>
-                                <span style={iconTextStyle}>{navigation.title}</span>
+                                <span className='icon-text'>{navigation.title}</span>
                             </NavLink>
                             {navigation.submenu && (
                                 <span
@@ -38,7 +39,7 @@ const SideNavBar = () => {
                                         ...arrowStyle,
                                         transform: expandedSubMenus[index] ? 'rotate(90deg)' : 'rotate(0deg)',
                                         transition: 'transform 750ms ease-in-out',
-                                        marginLeft:'2rem'
+                                        marginLeft: 'auto',                       
                                     }}
                                     onClick={() => toggleSubMenu(index)}
                                 >
@@ -49,8 +50,8 @@ const SideNavBar = () => {
                         {navigation.submenu && (
                             <ul style={{ maxHeight: expandedSubMenus[index] ? '500px' : '0', overflow: 'hidden', transition: 'max-height 750ms ease-in-out' }}>
                                 {navigation.submenu.map((submenuItem, subIndex) => (
-                                    <li key={subIndex} style={subliStyle}>
-                                        <NavLink to={submenuItem.navLink} style={aStyle}>
+                                    <li key={subIndex} className='subli'>
+                                        <NavLink to={submenuItem.navLink} className="subMenu">
                                             <span>{submenuItem.title}</span>
                                         </NavLink>
                                     </li>
@@ -84,6 +85,45 @@ const arrowStyle = {
     cursor: 'pointer',
 };
 
+const aStyle = {
+    textDecoration: 'none',
+    //color: '#333', // text color
+    fontSize: '16px',
+    fontWeight: 'normal',
+    display: 'flex',
+    alignItems: 'center',
+    color: '#384262', //text color
+};
+
+const subMenuStyles = {
+    textDecoration: 'none',
+    //color: '#333', // text color
+    fontSize: '16px',
+    fontWeight: 'normal',
+    display: 'flex',
+    alignItems: 'center',
+    color: '#384262', //text color
+}
+
+const iconTextStyle = {
+    margin: '9px 0',
+
+};
+
+const leftActiveLineStyle: React.CSSProperties = {
+    background: '#FF1001',
+    width: '2px',
+    position: 'absolute',
+    height: '42px'
+};
+
+const iconStyle = {
+    marginLeft: '12px',
+    marginRight: '10px',
+    alignItems: 'center',
+    width: '1.2rem',
+    color: '#384262'
+};
 
 const asideStyle = {
     // width: '200px',
@@ -92,9 +132,7 @@ const asideStyle = {
     background: '#fff',
     padding: '8px',
     boxSizing: 'border-box' as 'border-box',
-    
 };
-
 
 const ulStyle = {
     listStyle: 'none',
@@ -102,7 +140,6 @@ const ulStyle = {
     marginTop: 5,
     
 };
-
 
 const liStyle = {
     marginBottom: '15px',
@@ -112,39 +149,6 @@ const liStyle = {
 const subliStyle = {
     marginBottom: '15px',
     marginLeft: '1rem'
-};
-
-const aStyle = {
-    textDecoration: 'none',
-    //color: '#333', // text color
-    fontSize: '16px',
-    fontWeight: 'normal',
-    display: 'flex',
-    alignItems: 'center',
-    color: '#384262' //text color
-};
-
-
-const iconTextStyle = {
-    margin: '9px 0',
-
-};
-
-
-const leftActiveLineStyle: React.CSSProperties = {
-    background: '#FF1001',
-    width: '2px',
-    position: 'absolute',
-    height: '42px'
-};
-
-
-const iconStyle = {
-    marginLeft: '12px',
-    marginRight: '10px',
-    alignItems: 'center',
-    width: '1.2rem',
-    color: '#384262'
 };
 
 

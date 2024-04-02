@@ -1,9 +1,10 @@
 import Dropdown from 'react-bootstrap/Dropdown';
+import './index.css';
 
 const Drop_Down_Menu = () => {
     return (
         <div >
-            <Dropdown  style={dropdownStyles}>
+            <Dropdown  className='dropdownstyles'>
                 <Dropdown.Toggle id="dropdown-button-dark-example1" variant="light">
                     All Locations
                 </Dropdown.Toggle>
@@ -17,14 +18,9 @@ const Drop_Down_Menu = () => {
                     <Dropdown.Item href="#/action-4">Separated link</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
-
         </div>
     )
 }
 
-const dropdownStyles = {
-    // width: '11rem'
-    color:'#333'
-};
 
 export default Drop_Down_Menu;

@@ -3,64 +3,49 @@ import Drop_Down_Menu from '../../../components/Drop Down Menu';
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import './index.css';
+import PaymentStatusBox from '../../../components/Payment Status Box';
+import { paymentBoxData } from '../../../dummyData/FoodItemData';
+import BreakDownAccordian from '../../../components/BreakDownAccordian';
 
 const Payouts = () => {
     return (
-        <div style={componentOverview}>
-            <div style={firstRowStyles}>
-                <h2 style={{color:'#333'}}>Payments</h2>
-                <div style={firstRowSecondPartStyles}>
-                    <input type='date' style={inputStyles} />
+        <div className="payouts-container">
+            <div className="payouts-header">
+                <h2 className="payouts-title">Payments</h2>
+                <div className="payouts-content">
+                    <input type='date' className="payouts-input" />
                     <Drop_Down_Menu />
-                    <Button style={buttonStyles}>
-                        <FontAwesomeIcon icon={faDownload} style={{ marginRight: '1rem' }} />
+                    <Button className="payouts-button">
+                        <FontAwesomeIcon icon={faDownload} className='payouts-button-icon' />
                         Download
                     </Button>
                 </div>
             </div>
-            
+            <div className='paymentStatusBoxStyling'>
+                {paymentBoxData.map(item => (
+                    <PaymentStatusBox
+                        key={item.id}
+                        title={item.title}
+                        value={item.Value}
+                        percentage={item.Percentage}
+                    />
+                ))}
+            </div>
+            <div className='paymentsGraphBox'>
+                <div className='paymentGraphBoxUpperLine'>
+                    <h3>Sales Report</h3>
+                    <Button className='viewreportbtn'>View Report</Button>
+                </div>
+            </div>
+            <div className='payBreakDownBox'>
+                <div className='payBreakDownBoxContainer'>
+                    <h3>Pay Breakdown</h3>
+                    <BreakDownAccordian/>
+                </div>
+            </div>
         </div>
     );
-};
-
-const componentOverview = {
-    margin: '2rem 2rem'
-};
-
-const firstRowStyles = {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center', // Align vertically
-    gap: '2rem', // Adjusted gap
-    height: '2.5rem', // Adjusted height to 40px (2.5rem * 1.6)
-};
-
-const firstRowSecondPartStyles = {
-    display: 'flex',
-    gap: '1rem',
-    alignItems: 'center', // Align vertically
-    height: '100%', // Set height to 100% for consistent height
-};
-
-const inputStyles = {
-    height: '100%', // Set height to 100% for consistent height
-    width: '18rem', // Adjusted width for the date input
-    backgroundColor: '#fff', // Set background color to white
-    border: '1px solid #ced4da', // Add border
-    borderRadius: '4px', // Add border radius
-    padding: '0.375rem 0.75rem', // Add padding
-    color:'#333'
-};
-
-
-
-const buttonStyles = {
-    background: '#590B21',
-    color: '#fff',
-    border: '1px solid transparent',
-    height: '100%', // Set height to 100% for consistent height
-    borderRadius: '2rem', // Add border radius
-    width: '11rem', // Adjusted width for the button
 };
 
 export default Payouts;

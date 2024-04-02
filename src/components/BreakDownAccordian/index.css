@@ -1,0 +1,36 @@
+.breackdownrtnbtnprice {
+    background-color: #fff;
+}
+
+.Arrow-Icon {
+    font-size: 1rem;
+}
+
+.breakdownaccordianwhole {
+    font-size: 1.25rem;
+}
+
+.breakdownaccordiancard {
+    background-color: #fff !important;
+    border: transparent;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.breakdowncardheader{
+    background-color: #fff;
+}
+
+.accordion-title-value {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.breakdownaccordianbtn {
+    border: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: #fff;
+    justify-content: space-between;
+}

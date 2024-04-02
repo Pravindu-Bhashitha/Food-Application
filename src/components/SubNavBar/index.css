@@ -1,0 +1,15 @@
+.nav-pills .nav-link.active{
+    background-color: #fff;
+    border-bottom: 2px solid red;
+    border-radius: 0%;
+    height: 100%;
+}
+
+.subnavbartopdiv{
+    background-color: #fff;
+    border-left: 1px solid rgb(221, 221, 221);
+}
+
+.subnavbareachpart{
+    background-color: #f2f2f2;
+}

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Booking = () => {
   return (
-    <div id="booking" style={{color:'black'}}>
+    <div>
       This is booking
     </div>
   )

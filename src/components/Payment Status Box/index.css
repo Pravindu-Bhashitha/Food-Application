@@ -1,0 +1,27 @@
+.wholePaymentBox {
+    background-color: #fff;
+    width: 30%;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.paymentBoxDetails {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+}
+
+.paymentBoxDetailsAmount {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.paymentBoxDetailsPercentage {
+    font-size: 1rem;
+    color:#027A48;
+}

@@ -1,0 +1,12 @@
+.mainlayoutMainStyles{
+    display: flex;
+}
+
+.mainlayoutSideNavBarStyles{
+    width: 16%;
+}
+
+.mainlayoutOutletStyles{
+    width: 84%;
+    background-color: #F2F2F2;
+}

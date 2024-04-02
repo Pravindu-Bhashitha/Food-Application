@@ -1,0 +1,30 @@
+.navbarMainStyles{
+    background-color: #fff;
+    padding: 5px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    margin-top: 1rem; 
+   
+}
+
+.navbarulStyles{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbarlogoStyles{
+    width: 120px;
+    height: auto;
+}
+
+.navbarIconStyleDiv{
+    color: #667085;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbarIconStyles{
+    margin-right: 2vw;
+    cursor: pointer;
+}
